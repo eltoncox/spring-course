@@ -1,5 +1,6 @@
 package com.elton.course.domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,9 +25,11 @@ import lombok.Setter;
 @Getter @Setter
 
 @Entity(name = "user")
-public class User {
+public class User implements Serializable {
 		
-	  @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
 	  @GeneratedValue(strategy = GenerationType.IDENTITY)
 	  private Long id ;
 	  
